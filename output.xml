@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-21T19:25:34.927116" rpa="false" schemaversion="5">
+<suite id="s1" name="Home" source="C:\Development\Study\papito\Qax\projects\yodapp-robot\tests\home.robot">
+<test id="s1-t1" name="Deve abrir a tela principal" line="8">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>app=${EXECDIR}/app/yodapp-beta.apk</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appWaitActivity=*</arg>
+<arg>udid=emulator-5554</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-02-21T19:25:35.051847" elapsed="6.990668"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Yodapp</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-21T19:25:42.042801" elapsed="4.568302"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Mobile Training</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-21T19:25:46.611306" elapsed="0.018058"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>by Papito</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-21T19:25:46.629568" elapsed="0.013638"/>
+</kw>
+<status status="PASS" start="2025-02-21T19:25:35.051318" elapsed="11.592064"/>
+</test>
+<status status="PASS" start="2025-02-21T19:25:34.928143" elapsed="11.715559"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Home" id="s1" pass="1" fail="0" skip="0">Home</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
