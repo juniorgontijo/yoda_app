@@ -35,7 +35,7 @@ Go to item
     [Arguments]     ${item}    ${checkpoint}
     Wait Until Page Contains          ${item}      5
     Click Text                        ${item}
-    Wait Until Page Contains          ${checkpoint}      5
+    Wait Until Page Contains          ${checkpoint}      
 
 Close session
     Close Application
