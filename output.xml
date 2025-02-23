@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-21T19:25:34.927116" rpa="false" schemaversion="5">
-<suite id="s1" name="Home" source="C:\Development\Study\papito\Qax\projects\yodapp-robot\tests\home.robot">
-<test id="s1-t1" name="Deve abrir a tela principal" line="8">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-23T10:01:25.495778" rpa="false" schemaversion="5">
+<suite id="s1" name="Click" source="C:\Development\Study\papito\Qax\projects\yodapp-robot\tests\click.robot">
+<test id="s1-t1" name="Deve realizar um click simples" line="9">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://localhost:4723</arg>
 <arg>platformName=Android</arg>
@@ -18,26 +18,75 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-02-21T19:25:35.051847" elapsed="6.990668"/>
+<status status="PASS" start="2025-02-23T10:01:25.754168" elapsed="6.566551"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Yodapp</arg>
+<arg>${START}</arg>
+<arg>5</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-21T19:25:42.042801" elapsed="4.568302"/>
+<status status="PASS" start="2025-02-23T10:01:32.321028" elapsed="5.236131"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Mobile Training</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-21T19:25:46.611306" elapsed="0.018058"/>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-02-23T10:01:38.020979" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-02-23T10:01:37.557514" elapsed="0.463555"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>by Papito</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-21T19:25:46.629568" elapsed="0.013638"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-23T10:01:38.021463" level="INFO">${hamburger} = xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${hamburger}</var>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-23T10:01:38.021311" elapsed="0.000168"/>
 </kw>
-<status status="PASS" start="2025-02-21T19:25:35.051318" elapsed="11.592064"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-02-23T10:01:39.161522" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburger}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-02-23T10:01:38.021573" elapsed="1.140060"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-02-23T10:01:39.162926" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2025-02-23T10:01:39.266377" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburger}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-02-23T10:01:39.161985" elapsed="0.104467"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-23T10:01:39.266857" level="INFO">${menu_item} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<var>${menu_item}</var>
+<arg>xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-23T10:01:39.266690" elapsed="0.000188"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-02-23T10:01:40.183048" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${menu_item}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-02-23T10:01:39.266996" elapsed="0.916151"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-02-23T10:01:40.184066" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]'.</msg>
+<msg time="2025-02-23T10:01:40.336015" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${menu_item}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-02-23T10:01:40.183413" elapsed="0.152712"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-23T10:01:45.336809" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-23T10:01:40.336413" elapsed="5.000504"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-02-23T10:01:45.337179" elapsed="0.374190"/>
+</kw>
+<status status="PASS" start="2025-02-23T10:01:25.753597" elapsed="19.958083"/>
 </test>
-<status status="PASS" start="2025-02-21T19:25:34.928143" elapsed="11.715559"/>
+<status status="PASS" start="2025-02-23T10:01:25.497086" elapsed="20.215285"/>
 </suite>
 <statistics>
 <total>
@@ -46,7 +95,7 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 <tag>
 </tag>
 <suite>
-<stat name="Home" id="s1" pass="1" fail="0" skip="0">Home</stat>
+<stat name="Click" id="s1" pass="1" fail="0" skip="0">Click</stat>
 </suite>
 </statistics>
 <errors>
